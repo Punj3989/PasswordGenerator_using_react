@@ -14,7 +14,7 @@ function PasswordGenerator() {
     for (let i = 1; i <= length; i++) {
       let index = Math.floor(Math.random() * str.length);
       pass += str.charAt(index);
-    }
+    } 
 
     setPassword(pass);
   }, [length, numberAllowed, charAllowed]);
@@ -27,7 +27,7 @@ function PasswordGenerator() {
   };
   return (
     <>
-      <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 my-8 text-orange-400 bg-gray-600 h-30">
+      <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 my-8 text-white-400 bg-gray-600 h-30">
         <h1 className="text-white text-center">Password Generator</h1>
         <div className="flex ">
           <input
@@ -48,7 +48,7 @@ function PasswordGenerator() {
        
 
         <div className="flex text-sm gap-x-2">
-          <div className="flex items-center gap-x-1 mt-6 ">
+          <div className="flex items-center gap-2.5 mt-6 font-bold  ">
             <input
               type="range"
               min={4}
@@ -59,7 +59,6 @@ function PasswordGenerator() {
               className="w-"
             />
             <label>Length: {length}</label>
-
             <input type="checkbox"
             checked={numberAllowed}
               onChange={() => setnumberAllowed((prev) => !prev)}
